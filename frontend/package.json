@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@types/connect-livereload": "^0.6.3",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3",
+    "concurrently": "^9.1.2",
+    "connect-livereload": "^0.6.1",
+    "esbuild": "^0.25.3",
+    "livereload": "^0.9.3",
+    "serve": "^14.2.4",
+    "tsx": "^4.19.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
+    "axios": "^1.9.0",
+    "express": "^5.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-query": "^3.39.3",
+    "wouter": "^3.7.0",
+    "zod": "^3.24.3"
+  },
+  "scripts": {
+    "dev": "concurrently \"tsx esbuild.config.ts --watch\" \"tsx server.ts\"",
+    "build": "tsx esbuild.config.ts",
+    "test": "echo \"no tests configured yet\" && exit 0",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+  }
+}

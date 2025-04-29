@@ -1,0 +1,75 @@
+{
+    "info": {
+      "name": "Log Entry API",
+      "_postman_id": "a55c8659-bc91-4626-bd83-6dd1801cbd03",
+      "description": "Test CRUD operations for Log Entry Manager backend",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get All Logs",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:4000/api/logs",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "4000",
+            "path": ["api", "logs"]
+          }
+        }
+      },
+      {
+        "name": "Create Log",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"userName\": \"Alice\",\n  \"description\": \"Initial log entry\",\n  \"date\": \"2025-04-28T12:00:00.000Z\",\n  \"location\": \"New York\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:4000/api/logs",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "4000",
+            "path": ["api", "logs"]
+          }
+        }
+      },
+      {
+        "name": "Update Log",
+        "request": {
+          "method": "PUT",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"userName\": \"Bob\",\n  \"description\": \"Updated log entry\",\n  \"date\": \"2025-04-28T14:00:00.000Z\",\n  \"location\": \"Chicago\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:4000/api/logs/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "4000",
+            "path": ["api", "logs", ":id"]
+          }
+        }
+      },
+      {
+        "name": "Delete Log",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:4000/api/logs/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "4000",
+            "path": ["api", "logs", ":id"]
+          }
+        }
+      }
+    ]
+  }
+  
